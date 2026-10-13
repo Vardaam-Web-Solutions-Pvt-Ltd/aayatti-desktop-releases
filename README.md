@@ -1,21 +1,27 @@
 # Aayatti Desktop Companion
 
-Download the latest Aayatti Desktop Companion for your operating system.
+The Aayatti Desktop Companion runs on your computer next to your Aayatti
+account: punch in and out, see your status for the day, and get notifications.
 
-## Downloads
+## Download
 
-Open the [Releases](https://github.com/Vardaam-Web-Solutions-Pvt-Ltd/aayatti-desktop-releases/releases) page and download the installer for your operating system.
+Open **[Releases](../../releases)** and download the installer for your system
+from the **Assets** list of the newest release:
 
-- macOS: `.dmg` (one download for Apple Silicon and Intel Macs)
-- Windows: `.msi`
-- Linux: `.deb`, `.rpm` or `.AppImage`
+| System | File |
+|---|---|
+| macOS (Apple Silicon and Intel) | `Aayatti-Desktop-Companion_<version>_macos_universal.dmg` |
+| Windows 10 or 11 (64-bit) | `Aayatti-Desktop-Companion_<version>_windows_x64.msi` |
+| Ubuntu / Debian | `Aayatti-Desktop-Companion_<version>_linux_amd64.deb` |
+| Fedora / RHEL | `Aayatti-Desktop-Companion_<version>_linux_amd64.rpm` |
+| Other Linux | `Aayatti-Desktop-Companion_<version>_linux_amd64.AppImage` |
 
-Each release also has a `checksums.txt` file to check that your download is complete and unchanged.
+## Guides
 
-## Installation
+- **[Installation guide](./INSTALLATION.md)**: install, sign in, uninstall.
+- **[What's new](./WHATS-NEW.md)**: changes in each version.
+- **[About releases](./releases/README.md)**: version numbers, pre-releases, checksums.
 
-See [INSTALLATION.md](./INSTALLATION.md).
-
-> Current builds are not yet code-signed. macOS and Windows show a security
-> warning the first time you open the app. INSTALLATION.md explains how to
-> continue.
+> Current builds are **not yet code-signed** by Apple or Microsoft. Your
+> computer warns you the first time you open the app. The installation guide
+> shows how to continue on each system.
