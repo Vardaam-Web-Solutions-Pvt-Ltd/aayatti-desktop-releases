@@ -17,8 +17,10 @@ each system. Only do this for files downloaded from this page.
   and possibly on macOS (copying to Applications). On Windows the app
   installs for your user account.
 - **A supported system:** macOS on Apple Silicon or Intel, Windows 10 or 11
-  (64-bit), or 64-bit Ubuntu 22.04 or later, Debian 12 or later, Fedora or
-  RHEL.
+  (64-bit), or 64-bit Ubuntu 22.04 or later, Debian 12 or later, or Fedora.
+  RHEL is not tested yet.
+- **An internet connection** during install on Windows 10: the installer
+  downloads Microsoft Edge WebView2 if it is missing (Windows 11 has it).
 
 ## Download
 
@@ -28,7 +30,7 @@ each system. Only do this for files downloaded from this page.
    - macOS: `Aayatti-Desktop-Companion_<version>_macos_universal.dmg`
    - Windows: `Aayatti-Desktop-Companion_<version>_windows_x64-setup.exe`
    - Ubuntu / Debian: `Aayatti-Desktop-Companion_<version>_linux_amd64.deb`
-   - Fedora / RHEL: `Aayatti-Desktop-Companion_<version>_linux_amd64.rpm`
+   - Fedora: `Aayatti-Desktop-Companion_<version>_linux_amd64.rpm`
 3. Optional: also download `Aayatti-Desktop-Companion_<version>_checksums.txt`
    and [check your download](#check-your-download).
 
@@ -72,9 +74,9 @@ allow it with **More info → Run anyway**.
 2. Double-click `Aayatti-Desktop-Companion_<version>_windows_x64-setup.exe`.
 3. A blue window says *Windows protected your PC*. Click **More info**, then
    **Run anyway**.
-4. Follow the installer (**Next**, then **Install**). If User Account Control
-   asks *Do you want to allow this app to make changes?* (publisher:
-   Unknown), click **Yes**.
+4. Follow the installer and click **Install**. If User Account Control asks
+   *Do you want to allow this app to make changes?* (publisher: Unknown),
+   click **Yes**.
 5. Wait for the install to finish, then click **Finish**.
 6. Open **Aayatti Desktop Companion** from the Start menu.
 
@@ -102,7 +104,7 @@ Or in a terminal:
 sudo apt install ~/Downloads/Aayatti-Desktop-Companion_<version>_linux_amd64.deb
 ```
 
-### Fedora / RHEL (`.rpm`)
+### Fedora (`.rpm`)
 
 1. Double-click `Aayatti-Desktop-Companion_<version>_linux_amd64.rpm`.
    Software opens.
@@ -130,33 +132,42 @@ sudo dnf install ~/Downloads/Aayatti-Desktop-Companion_<version>_linux_amd64.rpm
    **Continue**.
 2. Enter your **Email** and **Password** and click **Sign In**, or use your
    company's sign-in button if one is shown.
-3. The dashboard opens. Closing the window keeps the app running in the menu
-   bar / tray; choose **Quit** there to stop it.
+3. The dashboard opens, with the tabs **Punch**, **Activity** and **AI
+   Analytics**. Closing the window keeps the app running in the menu bar /
+   tray; choose **Quit** there to stop it.
+4. If your system asks whether the app may show notifications, allow it, so
+   you see punch reminders and messages from your organization.
 
 ## AI Analytics
 
-AI Analytics is available only on **company-managed Macs**, and only if your
-organization uses it. It is not available on Windows and Linux yet.
+AI Analytics works only on **company-managed Macs** (enrolled in your
+company's device management), and only if your organization uses it. It
+cannot be turned on on Windows or Linux yet.
 
-1. On the dashboard, find the **AI Analytics** card and click **Enable AI
+1. In the app, open the **AI Analytics** tab and click **Enable AI
    Analytics**. Enter your Mac password when asked.
 2. Click **Connect this computer**. Your browser opens your company's Aayatti
-   site.
+   site. The button changes to **Waiting for approval… (open again)**.
 3. Sign in if asked, check the device details, and confirm. Only confirm if
-   you started this from the app on this computer just now.
-4. Return to the app. The card shows **Connected**.
+   you started this from the app on this computer just now. The request
+   expires after 10 minutes.
+4. Return to the app. **Device status** shows **Connected**.
 
-If the app says *Not installed: this device is not managed by your company
-(MDM)*, your Mac is not enrolled in your company's device management. Contact
-your administrator.
+If enabling fails with a message about MDM or device management, your Mac is
+not enrolled in your company's device management. Contact your administrator.
+
+The tab shows two statuses:
 
 | Status | Meaning | What to do |
 |---|---|---|
-| Connected | AI Analytics is on for your account | Nothing |
-| Not connected | Installed, but no account is linked | Click **Connect this computer** |
-| Waiting for approval | The browser step is not finished | Finish it in the browser, or click the button again |
-| Not installed | AI Analytics is off on this Mac | Click **Enable AI Analytics** |
-| Stopped / Unavailable | The background service is not running | Restart the Mac; contact your administrator if it stays |
+| Service status: **Running** | AI Analytics is working on this Mac | Nothing |
+| Service status: **Starting** | Just turned on | Wait a minute |
+| Service status: **Not installed** | AI Analytics is off on this Mac | Click **Enable AI Analytics** |
+| Service status: **Stopped** / **Unavailable** | The background service is not running | Restart the Mac; contact your administrator if it stays |
+| Device status: **Connected** | This Mac is linked to your account | Nothing |
+| Device status: **Connecting** | The browser step is not finished | Finish it in the browser, or click the button again |
+| Device status: **Not connected** | No account is linked | Click **Connect this computer** |
+| Device status: **Expired** / **Revoked** | The link ended or was removed on the website | Click **Connect this computer** again |
 
 ## Check your download
 
@@ -205,11 +216,12 @@ install it over the old one, the same way as above. You stay signed in.
 - **macOS:** if AI Analytics is on, first click **Turn off AI Analytics** in
   the app and enter your password. Then quit the app (menu bar icon →
   **Quit**) and drag it from Applications to the Trash.
-- **Windows:** **Settings → Apps → Installed apps → Aayatti Desktop Companion
-  → Uninstall**.
+- **Windows:** quit the app (tray icon → **Quit**), then **Settings → Apps →
+  Installed apps** (Windows 10: **Apps & features**) → **Aayatti Desktop
+  Companion** → **Uninstall**.
 - **Linux:** App Center / Software → **Aayatti Desktop Companion** →
   **Uninstall**, or `sudo apt remove aayatti-desktop-companion` (Ubuntu /
-  Debian), `sudo dnf remove aayatti-desktop-companion` (Fedora / RHEL).
+  Debian), `sudo dnf remove aayatti-desktop-companion` (Fedora).
 
 Your account and the data already sent to your organization stay on the
 Aayatti website.

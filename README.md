@@ -13,7 +13,7 @@ from the **Assets** list of the newest release:
 | macOS (Apple Silicon and Intel) | `Aayatti-Desktop-Companion_<version>_macos_universal.dmg` |
 | Windows 10 or 11 (64-bit) | `Aayatti-Desktop-Companion_<version>_windows_x64-setup.exe` |
 | Ubuntu / Debian | `Aayatti-Desktop-Companion_<version>_linux_amd64.deb` |
-| Fedora / RHEL | `Aayatti-Desktop-Companion_<version>_linux_amd64.rpm` |
+| Fedora | `Aayatti-Desktop-Companion_<version>_linux_amd64.rpm` |
 
 ## Guides
 
