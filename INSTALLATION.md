@@ -28,7 +28,6 @@ each system. Only do this for files downloaded from this page.
    - Windows: `Aayatti-Desktop-Companion_<version>_windows_x64.msi`
    - Ubuntu / Debian: `Aayatti-Desktop-Companion_<version>_linux_amd64.deb`
    - Fedora / RHEL: `Aayatti-Desktop-Companion_<version>_linux_amd64.rpm`
-   - Other Linux: `Aayatti-Desktop-Companion_<version>_linux_amd64.AppImage`
 3. Optional: also download `Aayatti-Desktop-Companion_<version>_checksums.txt`
    and [check your download](#check-your-download).
 
@@ -112,13 +111,6 @@ Or in a terminal:
 
 ```bash
 sudo dnf install ~/Downloads/Aayatti-Desktop-Companion_<version>_linux_amd64.rpm
-```
-
-### Other distributions (`.AppImage`)
-
-```bash
-chmod +x ~/Downloads/Aayatti-Desktop-Companion_<version>_linux_amd64.AppImage
-~/Downloads/Aayatti-Desktop-Companion_<version>_linux_amd64.AppImage
 ```
 
 ### After installing on Linux
@@ -214,7 +206,8 @@ install it over the old one, the same way as above. You stay signed in.
 - **Windows:** **Settings → Apps → Installed apps → Aayatti Desktop Companion
   → Uninstall**.
 - **Linux:** App Center / Software → **Aayatti Desktop Companion** →
-  **Uninstall**. AppImage: delete the file.
+  **Uninstall**, or `sudo apt remove aayatti-desktop-companion` (Ubuntu /
+  Debian), `sudo dnf remove aayatti-desktop-companion` (Fedora / RHEL).
 
 Your account and the data already sent to your organization stay on the
 Aayatti website.

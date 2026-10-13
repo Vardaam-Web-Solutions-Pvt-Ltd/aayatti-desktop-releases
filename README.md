@@ -14,7 +14,6 @@ from the **Assets** list of the newest release:
 | Windows 10 or 11 (64-bit) | `Aayatti-Desktop-Companion_<version>_windows_x64.msi` |
 | Ubuntu / Debian | `Aayatti-Desktop-Companion_<version>_linux_amd64.deb` |
 | Fedora / RHEL | `Aayatti-Desktop-Companion_<version>_linux_amd64.rpm` |
-| Other Linux | `Aayatti-Desktop-Companion_<version>_linux_amd64.AppImage` |
 
 ## Guides
 
