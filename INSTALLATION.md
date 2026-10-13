@@ -13,8 +13,9 @@ each system. Only do this for files downloaded from this page.
 - **An account.** Your administrator creates it. You also need your
   **company domain** (for example `vardaam`); ask your administrator if you do
   not know it.
-- **Administrator rights** on the computer. The Windows and Linux installers
-  ask for your computer password.
+- **Administrator rights** on Linux (the installer asks for your password)
+  and possibly on macOS (copying to Applications). On Windows the app
+  installs for your user account.
 - **A supported system:** macOS on Apple Silicon or Intel, Windows 10 or 11
   (64-bit), or 64-bit Ubuntu 22.04 or later, Debian 12 or later, Fedora or
   RHEL.
@@ -25,7 +26,7 @@ each system. Only do this for files downloaded from this page.
 2. Open the newest release and expand **Assets**. Download the file for your
    system:
    - macOS: `Aayatti-Desktop-Companion_<version>_macos_universal.dmg`
-   - Windows: `Aayatti-Desktop-Companion_<version>_windows_x64.msi`
+   - Windows: `Aayatti-Desktop-Companion_<version>_windows_x64-setup.exe`
    - Ubuntu / Debian: `Aayatti-Desktop-Companion_<version>_linux_amd64.deb`
    - Fedora / RHEL: `Aayatti-Desktop-Companion_<version>_linux_amd64.rpm`
 3. Optional: also download `Aayatti-Desktop-Companion_<version>_checksums.txt`
@@ -68,15 +69,16 @@ allow it with **More info → Run anyway**.
 1. If your browser marks the download as unsafe or uncommon, open the
    browser's downloads list, click **…** next to the file and choose **Keep**
    (Edge: **Keep → Show more → Keep anyway**).
-2. Double-click `Aayatti-Desktop-Companion_<version>_windows_x64.msi`.
+2. Double-click `Aayatti-Desktop-Companion_<version>_windows_x64-setup.exe`.
 3. A blue window says *Windows protected your PC*. Click **More info**, then
    **Run anyway**.
-4. Follow the installer. When User Account Control asks *Do you want to allow
-   this app to make changes?* (publisher: Unknown), click **Yes**.
+4. Follow the installer (**Next**, then **Install**). If User Account Control
+   asks *Do you want to allow this app to make changes?* (publisher:
+   Unknown), click **Yes**.
 5. Wait for the install to finish, then click **Finish**.
 6. Open **Aayatti Desktop Companion** from the Start menu.
 
-If **Run anyway** does not appear, right-click the `.msi` → **Properties** →
+If **Run anyway** does not appear, right-click the `.exe` → **Properties** →
 tick **Unblock** at the bottom → **OK**, then double-click it again.
 
 The app lives in the system tray (bottom right, possibly under **^**). If no
@@ -172,10 +174,10 @@ Your installer's line must end in `OK`.
 Windows (PowerShell, in that folder):
 
 ```powershell
-Get-FileHash .\Aayatti-Desktop-Companion_<version>_windows_x64.msi -Algorithm SHA256
+Get-FileHash .\Aayatti-Desktop-Companion_<version>_windows_x64-setup.exe -Algorithm SHA256
 ```
 
-The hash must match the `.msi` line in the checksums file (letter case does
+The hash must match the `-setup.exe` line in the checksums file (letter case does
 not matter).
 
 ## If something goes wrong
