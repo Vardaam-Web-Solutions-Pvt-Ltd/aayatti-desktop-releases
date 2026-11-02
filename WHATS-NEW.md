@@ -3,6 +3,16 @@
 Changes in each version of the Aayatti Desktop Companion. Downloads are on the
 [Releases](../../releases) page.
 
+## 0.1.14
+
+Not yet code-signed.
+
+- **Windows: the app connects again while AI Analytics is on.** Since 0.1.8 the app misread the proxy setting AI Analytics uses, so signing in, punching and syncing failed with "Network error: Could not connect to server". On an affected computer the automatic update cannot reach the server either: download this version and install it by hand (it needs administrator permission). Signing in now also works on every system when the AI Analytics service is not answering.
+- **Windows: the app moves to Program Files.** It is now installed once for the whole computer. This update asks for administrator permission; without it the app stays on the current version and keeps working.
+- **Signing out during a server outage is no longer lost.** AI Analytics now records a sign-out made while the server cannot be reached.
+- **The website shows each computer's current version.** AI Analytics now reports its version with each upload.
+- **Security improvements.** On Linux, the app's data folder can be opened only by its owner. Debug features are off in released builds. The app opens web links only on its own sites.
+
 ## 0.1.5
 
 Pre-release, for pilot users. Not yet code-signed.
