@@ -3,6 +3,12 @@
 Changes in each version of the Aayatti Desktop Companion. Downloads are on the
 [Releases](../../releases) page.
 
+## 0.1.15
+
+Not yet code-signed.
+
+- **The AI Analytics service update is easier to find.** After an app update, the app asks once for an administrator password to update the AI Analytics service. If that request was cancelled or missed, an Update notice now appears on every tab, not only on the AI Analytics tab.
+
 ## 0.1.14
 
 Not yet code-signed.
